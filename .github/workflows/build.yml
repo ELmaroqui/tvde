@@ -16,8 +16,8 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Install Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Show Android SDK location
+        run: echo "ANDROID_HOME=$ANDROID_HOME" && ls "$ANDROID_HOME" || true
 
       - uses: gradle/actions/setup-gradle@v4
         with:
