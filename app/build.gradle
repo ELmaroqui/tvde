@@ -1,0 +1,26 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'app.minimaltv.launcher'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'app.minimaltv.launcher'
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
